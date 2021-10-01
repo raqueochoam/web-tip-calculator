@@ -1,27 +1,23 @@
-var isPress;
-var button = document.getElementById("tip");
-
 function selectTip(x,id){
-    if(button.value==false){
-        isPres=true;
-        console.log(isPress);
-    }
-    else{
-        isPress=false;
-        console.log(isPress);
-    }
     var tip = x;
-    console.log(tip);
-}
-
-function calculateTipAmount(){
     var bill = document.getElementById("bill").value;
     var people = document.getElementById("people").value;
+    console.log(tip, bill, people);
 
+    document.getElementById("customtip").value = "";
+
+    var totaltipAmount = (tip*100)/bill;
+    var total = (bill/people)+totaltipAmount;
+
+    totaltipAmount=totaltipAmount.toFixed(2);
+    total=total.toFixed(2);
+
+
+    if(bill != "" && people != "" && people !=0){
+        document.getElementById("tipAmount").innerHTML = "$" + totaltipAmount;
+        document.getElementById("total").innerHTML = "$" + total;
+    }
 
 }
 
-function calculateTotal(){
-
-}
 
