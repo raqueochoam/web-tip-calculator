@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Tip calculator app</title>
+</head>
+<body>
+  <h1>SPLI<br>TTER</h1>
+
+  <div class="box1">
+    <div class="box2">
+      
+        <label for="bill" class="textForm">Bill</label>
+        <div class="long-input">
+          <img src="images/icon-dollar.svg" alt="" class="dollar">
+          <input type="number" name="bill" id="bill" class="long-input" placeholder="0">
+        </div>
+        <label for="tip" class="textForm">Select Tip %</label>
+        <div class="tip">
+          <div>
+            <button class="tip" id="tip" value="false" onclick="selectTip(5, this.id)">5%</button>
+            <button class="tip" id="tip" onclick="selectTip(10, this.id)">10%</button>
+            <button class="tip" id="tip" onclick="selectTip(15, this.id)">15%</button>
+          </div>
+          <div>
+            <button class="tip" id="tip" onclick="selectTip(25, this.id)">25%</button>
+            <button class="tip" id="tip" onclick="selectTip(50, this.id)">50%</button>
+            <input type="number" class="tip" id="customtip">
+          </div>
+        </div>
+        <label for="people" class="textForm">Number of People</label>
+        <div>
+          <img src="images/icon-person.svg" alt="" class="person">
+          <input type="number" name="people" id="people" class="long-input" placeholder="0">
+        </div>
+        
+  
+    </div>
+    <div class="box3">
+      <div>
+        <p class="textResult">Tip Amount</p>
+        <p class="subtext">/ person</p>
+
+        <h2 class="tipAmount">$0.00</h2>
+      </div>
+      <div>
+        <p class="textResult">Total</p>
+        <p class="subtext">/ person</p>
+
+        <h2 class="total">$00.00</h2>
+      </div>
+
+      <button class="reset">RESET</button>
+    </div>
+  </div>
+  <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
